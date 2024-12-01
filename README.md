@@ -24,6 +24,7 @@ Packages and condistions needed:
    pip install langchain   
    pip install streamlit   
    pip install pandas
+   
    pip install plotly==5.24.1
    
 5. How to run:
