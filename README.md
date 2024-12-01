@@ -1,16 +1,5 @@
-# llm-structucted-data-with-tools
-Provide a context-aware Large Language Model (LLM) end-to-end solution with Retrieval Augmented Generation (RAG) on data health and analysis for unstructured data and structured data. The solution (implemented in Python with Langchain, Streamlit, and other tools you need (I will cover in mext project)
-
-          - understands and analyses text data as well as numeric data
-          - only answers enterprise specified data related questions
-          - replies “No” if it doesn’t know from the specified data
-          - structured data is any data Pandas Dataframe can handle (csv, excel, JSON, table, etc.)
-          - unstructured data includes pdf, email, text, word and other non-tabular format data. In our test case we test on pdf file.
-          - for unstructured data, Vectorizing with FAISS (Facebook Similarity Soluntion) is used to improve accuracy
-          - Analysis results depend on internal enterprise data only (NO “general” results)
-          - Results are updated when new data files are uploaded
-          - I use https://platform.openai.com/ for OpenAI support, but can change to other OpenAI supporter (AWS Bedrock, Databricks dataiku, etc.)
-
+# llm-structucted-data-with-tools (series 2)
+This is series 2 of LLM + RAG (series 1 is in https://github.com/proteus2015/llm-on-structured-unstructured-data/blob/main/README.md#llm-on-structed-unstrcted-data-series-1( focusing on LLM + RAG for unstructured data. Tool plotly is added in langchain LLM+ RAG chain to display output from LLM result. 
 Architecture:
 
 ![image](https://github.com/user-attachments/assets/b4d20b98-12ca-4225-b1bf-b33cba572a5f)
@@ -41,28 +30,17 @@ Packages and condistions needed:
  
        cd vectorizing
    
-       streamlit run .\dataset-server.py
+       streamlit run .\dataset-serve-with-tools.py
    
 
    A new URL will pop up. Current codes support upload 1 to 2 csv files; then raise questions on the uploaded files in the same URL. An example is shown below:
 
-     ![image](https://github.com/user-attachments/assets/c495570d-864c-44a1-b342-4385baec0f48)
+<img width="536" alt="numeric tabular data result-8  draw line chart with plotly as Tool-1" src="https://github.com/user-attachments/assets/1ab44ceb-ecde-41c9-a0ad-aeffc0a71c21">
+<img width="935" alt="numeric tabular data result-8  draw line chart with plotly as Tool-2" src="https://github.com/user-attachments/assets/3631fb41-7961-4350-8125-73a690ca59bd">
+
+    
 
               
-  4.2  A. for pdf file(s) , you can upload as many pdf files as possible depending your env cpu and memory in the same URL. Files will be splitted into trunks and vertorized into FAISS vectors saving in FAISS vector store (2 files in foloder /vectorstore in the codes). You can choose to any other vectorizing tools.
-       B. go to customer folder to run:
-
-          streamlit run .\customer_request.py
-
-   A second URL will pop up for you to raise questions. Examples are:
-
-   ![image](https://github.com/user-attachments/assets/abf17480-5d01-4e7f-9398-9d9781ae0894)
-
-   ![image](https://github.com/user-attachments/assets/a5429936-68ef-47aa-892a-77074006b160)
-
-   ![image](https://github.com/user-attachments/assets/a9d0b711-09aa-4bef-ac7a-b55d0575f11a)
-   ![image](https://github.com/user-attachments/assets/2ff1d2e5-5a56-4e36-8e48-65ddd86c299f)
-
-
+ 
           
   
