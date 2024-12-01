@@ -1,5 +1,5 @@
 # llm-structucted-data-with-tools (series 2)
-This is series 2 of LLM + RAG (series 1 is in https://github.com/proteus2015/llm-on-structured-unstructured-data/blob/main/README.md#llm-on-structed-unstrcted-data-series-1) focusing on LLM + RAG for structured data A tool plotly is added in langchain LLM+ RAG chain to display output from LLM result. 
+This is series 2 of LLM + RAG (series 1 is in https://github.com/proteus2015/llm-on-structured-unstructured-data/blob/main/README.md#llm-on-structed-unstrcted-data-series-1) focusing on LLM + RAG for structured data. A tool plotly is added in langchain LLM+ RAG chain to display output from LLM result. 
 Architecture:
 
 ![image](https://github.com/user-attachments/assets/b4d20b98-12ca-4225-b1bf-b33cba572a5f)
